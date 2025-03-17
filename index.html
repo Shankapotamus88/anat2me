@@ -4,37 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anat2me</title>
-    <style>
-        /* Full page black background */
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: black;
-            color: gray;
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            height: 100vh;
-        }
-
-        /* Anat2me Title */
-        .title {
-            font-size: 3rem;
-            font-weight: bold;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        /* Visit Counter */
-        .counter {
-            position: absolute;
-            bottom: 20px;
-            text-align: center;
-            font-size: 1.5rem;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -46,22 +16,7 @@
         Visits: <span id="visit-count">0</span>
     </div>
 
-    <script>
-        // Load visit count from localStorage
-        let visitCount = localStorage.getItem("visitCount");
-
-        if (!visitCount) {
-            visitCount = 1; // First visit
-        } else {
-            visitCount = parseInt(visitCount) + 1; // Increase count
-        }
-
-        // Save updated count to localStorage
-        localStorage.setItem("visitCount", visitCount);
-
-        // Display the count
-        document.getElementById("visit-count").innerText = visitCount;
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
