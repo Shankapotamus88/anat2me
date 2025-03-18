@@ -1,68 +1,19 @@
-/* General Styles */
-body {
-    background-color: black;
-    color: gray;
-    font-family: 'Brush Script MT', cursive;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+// Function to toggle the dropdown menu
+function toggleMenu() {
+    let menu = document.getElementById("menu");
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
 }
 
-/* Anat2me Title */
-.title {
-    font-size: 4rem;
-    font-weight: bold;
-    margin: 0;
-}
-
-.underline {
-    width: 50%;
-    border: 2px solid white;
-    margin: 10px auto;
-}
-
-/* Menu Button */
-.menu-container {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-.menu-button {
-    background-color: gray;
-    color: black;
-    border: none;
-    padding: 10px 15px;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-/* Dropdown Menu */
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: black;
-    border: 1px solid white;
-    right: 0;
-    top: 40px;
-    min-width: 150px;
-    z-index: 1000;
-}
-
-.dropdown-menu a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    padding: 10px;
-    text-align: left;
-}
-
-.dropdown-menu a:hover {
-    background-color: gray;
-}
+// Close menu when clicking outside of it
+document.addEventListener("click", function(event) {
+    let menu = document.getElementById("menu");
+    let button = document.querySelector(".menu-button");
+    
+    if (!button.contains(event.target) && !menu.contains(event.target)) {
+        menu.style.display = "none";
+    }
+});
