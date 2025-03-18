@@ -8,12 +8,20 @@
 </head>
 <body>
 
-    <!-- Anat2me Title -->
-    <div class="title">Anat2me</div>
+    <!-- Navigation Menu Button -->
+    <div class="menu-container">
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+        <div class="dropdown-menu" id="menu">
+            <a href="about.html">About Page</a>
+            <a href="privacy.html">Privacy Page</a>
+            <a href="contact.html">Contact Page</a>
+        </div>
+    </div>
 
-    <!-- Visit Counter -->
-    <div class="counter">
-        Visits: <span id="visit-count">0</span>
+    <!-- Anat2me Title -->
+    <div class="title-container">
+        <h1 class="title">Anat2me</h1>
+        <hr class="underline">
     </div>
 
     <script src="script.js"></script>
