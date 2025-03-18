@@ -8,9 +8,9 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Top grey bar styling */
+/* Top grey bar styling with transparency */
 .top-bar {
-  background-color: grey;
+  background-color: rgba(128, 128, 128, 0.5); /* 50% opacity grey */
   padding: 20px 0;
 }
 
