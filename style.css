@@ -2,8 +2,8 @@
 body {
   margin: 0;
   padding: 0;
-  /* Skeleton image moved upward by 65% of the viewport height */
-  background: url("images/Front Facing Skeleton.webp") no-repeat center -65vh fixed;
+  /* Skeleton image moved upward by 60% of the viewport height */
+  background: url("images/Front Facing Skeleton.webp") no-repeat center -60vh fixed;
   background-size: cover;
   font-family: Arial, sans-serif;
 }
