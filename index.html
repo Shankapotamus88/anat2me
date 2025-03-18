@@ -1,22 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anat2me</title>
+  <style>
+    /* Reset default margins and paddings */
+    body {
+      margin: 0;
+      padding: 0;
+      /* Skeleton image moved upward by 75% of the viewport height */
+      background: url("images/Front Facing Skeleton.webp") no-repeat center -75vh fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      position: relative; /* enables absolute positioning of child elements */
+    }
+
+    /* Top grey bar styling with transparency */
+    .top-bar {
+      background-color: rgba(128, 128, 128, 0.5); /* semi-transparent grey */
+      padding: 20px 0;
+    }
+
+    /* Center the navigation links horizontally */
+    .top-bar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .top-bar ul li {
+      margin: 0 15px;
+    }
+
+    .top-bar ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    /* Elliptical container for "Anat2me" */
+    .anat2me-ellipse {
+      position: absolute;
+      top: 20vh; /* Adjust this value to align with the skeleton's head */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300px;
+      height: 200px;  /* Different width and height create an ellipse */
+      border: 2px solid #ccc;
+      border-radius: 50%; /* Makes the container elliptical */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.7); /* semi-transparent background */
+      font-family: cursive;
+      font-size: 2em;
+      color: grey;
+    }
+  </style>
 </head>
 <body>
-  <nav class="top-bar">
+  <div class="top-bar">
     <ul>
+      <li><a href="#">Home</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Contact</a></li>
-      <li><a href="#">Privacy</a></li>
     </ul>
-  </nav>
-  <div class="content">
-    <h1>Anat2me</h1>
   </div>
-  <script src="script.js"></script>
+
+  <!-- Elliptical container for "Anat2me" -->
+  <div class="anat2me-ellipse">Anat2me</div>
 </body>
 </html>
