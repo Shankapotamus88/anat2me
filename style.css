@@ -2,7 +2,9 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #000; /* Black background */
+  /* Use the skeleton image as the page background */
+  background: url("images/Front Facing Skeleton.webp") no-repeat center center fixed;
+  background-size: cover;
   font-family: Arial, sans-serif;
 }
 
@@ -27,13 +29,15 @@ body {
 
 .top-bar ul li a {
   text-decoration: none;
-  color: white; /* Use white for clear contrast on grey */
+  color: white; /* Use white for contrast on grey */
   font-weight: bold;
 }
 
 /* Center the "Anat2me" text */
 .content {
-  height: calc(100vh - 80px); /* Adjust height considering top bar */
+  /* Adjust the height to ensure your heading is nicely displayed
+     while the grey bar remains at the top */
+  height: calc(100vh - 80px);
   display: flex;
   justify-content: center;
   align-items: center;
