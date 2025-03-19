@@ -5,53 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anat2me</title>
   <style>
-    /* Reset default margins and paddings */
-    body {
+    /* Universal reset */
+    * {
       margin: 0;
       padding: 0;
-      /* Background image moved upward by 60% of the viewport height */
-      background: url("images/Front Facing Skeleton.webp") no-repeat center -60vh fixed;
-      background-size: cover;
+      box-sizing: border-box;
+    }
+    
+    body {
       font-family: Arial, sans-serif;
       position: relative;
+      /* Use a responsive background setup */
+      background: url("images/Front Facing Skeleton.webp") no-repeat center center fixed;
+      background-size: cover;
     }
-
-    /* Top grey bar styling with transparency */
+    
+    /* Container for centering content on larger screens */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    /* Top navigation bar */
     .top-bar {
-      background-color: rgba(128, 128, 128, 0.5); /* Semi-transparent grey */
+      background-color: rgba(128, 128, 128, 0.5);
       padding: 2vh 0;
     }
-
-    /* Center the navigation links horizontally */
+    
     .top-bar ul {
       list-style: none;
-      margin: 0;
-      padding: 0;
       display: flex;
       justify-content: center;
     }
-
+    
     .top-bar ul li {
       margin: 0 2vw;
     }
-
+    
     .top-bar ul li a {
       text-decoration: none;
       color: white;
       font-weight: bold;
+      font-size: 1.2em;
     }
-
+    
     /* "Anat2me" text positioned over the skeleton's head */
     .anat2me-ellipse {
       position: absolute;
-      top: 20vh; /* Adjust to align with the skeleton's head */
+      top: 20vh;
       left: 50%;
       transform: translateX(-50%);
       font-family: cursive;
       font-size: 2em;
       color: grey;
     }
-
+    
     /* Extra content to allow scrolling */
     .extra-content {
       margin-top: 50vh;
@@ -59,17 +67,21 @@
       background-color: rgba(255, 255, 255, 0.8);
       min-height: 150vh;
     }
-
-    /* Responsive design for mobile devices */
+    
+    /* Mobile devices (up to 600px wide) */
     @media (max-width: 600px) {
       body {
-        background-position: center -40vh fixed;
+        /* Adjust background position so the important part of the image is visible */
+        background-position: center 0;
       }
       .top-bar {
         padding: 2vh 0;
       }
       .top-bar ul li {
         margin: 0 1.5vw;
+      }
+      .top-bar ul li a {
+        font-size: 1em;
       }
       .anat2me-ellipse {
         font-size: 1.5em;
@@ -79,6 +91,50 @@
         margin-top: 25vh;
         padding: 2vh;
         min-height: 100vh;
+      }
+    }
+    
+    /* Tablet devices (between 601px and 1024px wide) */
+    @media (min-width: 601px) and (max-width: 1024px) {
+      body {
+        background-position: center -30vh;
+      }
+      .top-bar {
+        padding: 2vh 0;
+      }
+      .top-bar ul li {
+        margin: 0 2vw;
+      }
+      .top-bar ul li a {
+        font-size: 1.1em;
+      }
+      .anat2me-ellipse {
+        font-size: 1.8em;
+        top: 18vh;
+      }
+      .extra-content {
+        margin-top: 40vh;
+        padding: 2vh;
+        min-height: 120vh;
+      }
+    }
+    
+    /* Desktop devices (1025px and wider) */
+    @media (min-width: 1025px) {
+      body {
+        background-position: center -60vh;
+      }
+      .top-bar ul li a {
+        font-size: 1.2em;
+      }
+      .anat2me-ellipse {
+        font-size: 2em;
+        top: 20vh;
+      }
+      .extra-content {
+        margin-top: 50vh;
+        padding: 2vh;
+        min-height: 150vh;
       }
     }
   </style>
@@ -91,10 +147,10 @@
       <li><a href="#">Contact</a></li>
     </ul>
   </div>
-
+  
   <!-- "Anat2me" text positioned over the skeleton's head -->
   <div class="anat2me-ellipse">Anat2me</div>
-
+  
   <!-- Extra content section to enable scrolling -->
   <div class="extra-content">
     <h2>More Content</h2>
