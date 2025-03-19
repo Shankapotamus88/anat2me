@@ -13,12 +13,12 @@
       background: url("images/Front Facing Skeleton.webp") no-repeat center -75vh fixed;
       background-size: cover;
       font-family: Arial, sans-serif;
-      position: relative; /* enables absolute positioning of child elements */
+      position: relative; /* Enables absolute positioning of child elements */
     }
 
     /* Top grey bar styling with transparency */
     .top-bar {
-      background-color: rgba(128, 128, 128, 0.5); /* semi-transparent grey */
+      background-color: rgba(128, 128, 128, 0.5); /* Semi-transparent grey */
       padding: 20px 0;
     }
 
@@ -41,23 +41,16 @@
       font-weight: bold;
     }
 
-    /* Elliptical container for "Anat2me" */
+    /* "Anat2me" text positioned over the skeleton's head without a background circle */
     .anat2me-ellipse {
       position: absolute;
-      top: 20vh; /* Adjust this value to align with the skeleton's head */
+      top: 20vh; /* Adjust to align with the skeleton's head */
       left: 50%;
       transform: translateX(-50%);
-      width: 300px;
-      height: 200px;  /* Different width and height create an ellipse */
-      border: 2px solid #ccc;
-      border-radius: 50%; /* Makes the container elliptical */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(255, 255, 255, 0.7); /* semi-transparent background */
       font-family: cursive;
       font-size: 2em;
       color: grey;
+      /* Removed width, height, border, border-radius, and background to eliminate the circle */
     }
   </style>
 </head>
@@ -70,7 +63,7 @@
     </ul>
   </div>
 
-  <!-- Elliptical container for "Anat2me" -->
+  <!-- "Anat2me" text without the elliptical background -->
   <div class="anat2me-ellipse">Anat2me</div>
 </body>
 </html>
