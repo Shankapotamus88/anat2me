@@ -9,9 +9,9 @@
     body {
       margin: 0;
       padding: 0;
-      /* Background image moved upward by 75% of the viewport height */
+      /* Scale down the background skeleton image */
       background: url("images/Front Facing Skeleton.webp") no-repeat center -75vh fixed;
-      background-size: cover;
+      background-size: 50%; /* Adjust this percentage to scale the image down */
       font-family: Arial, sans-serif;
       position: relative;
     }
@@ -54,7 +54,7 @@
 
     /* Extra content to allow scrolling */
     .extra-content {
-      margin-top: 600px; /* Push the extra content further down */
+      margin-top: 300px; /* Push the extra content further down */
       padding: 20px;
       background-color: rgba(255, 255, 255, 0.8);
       min-height: 150vh; /* Ensures content height exceeds the viewport */
@@ -76,6 +76,10 @@
         margin-top: 200px;
         padding: 15px;
         min-height: 100vh;
+      }
+      /* Adjust background size on mobile if needed */
+      body {
+        background-size: 70%;
       }
     }
   </style>
