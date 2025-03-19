@@ -5,81 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anat2me</title>
   <style>
-    /* Reset default margins and paddings */
-    body {
+    /* Global reset */
+    * {
       margin: 0;
       padding: 0;
-      /* Adjusted background for desktop: skeleton image shifted down */
-      background: url("images/Front Facing Skeleton.webp") no-repeat center -40vh fixed;
-      background-size: cover;
-      font-family: Arial, sans-serif;
-      position: relative;
+      box-sizing: border-box;
     }
-
-    /* Top grey bar styling with transparency */
+    
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    /* Grey top bar */
     .top-bar {
       background-color: rgba(128, 128, 128, 0.5);
       padding: 2vh 0;
+      text-align: center;
     }
-
-    /* Center the navigation links horizontally */
+    
     .top-bar ul {
       list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
+      display: inline-flex;
     }
-
+    
     .top-bar ul li {
       margin: 0 2vw;
     }
-
+    
     .top-bar ul li a {
       text-decoration: none;
       color: white;
       font-weight: bold;
       font-size: 1.2em;
     }
-
-    /* "Anat2me" text positioned over the skeleton's head (raised on desktop) */
+    
+    /* Main content container below the top bar */
+    .main-content {
+      position: relative;
+      /* Background image applied to the container, positioned relative to the top bar */
+      background: url("images/Front Facing Skeleton.webp") no-repeat center top;
+      background-size: cover;
+      /* Optional: add padding so content doesn’t overlap the image */
+      padding-top: 20vh;
+    }
+    
+    /* "Anat2me" positioned relative to .main-content */
     .anat2me-ellipse {
       position: absolute;
-      top: 10vh; /* raised compared to previous 20vh */
+      top: 10vh; /* measured from the top of .main-content */
       left: 50%;
       transform: translateX(-50%);
       font-family: cursive;
       font-size: 2em;
       color: grey;
     }
-
-    /* Extra content to allow scrolling */
+    
+    /* White box with extra content */
     .extra-content {
-      margin-top: 75vh;
+      margin-top: 50vh; /* pushes this section down from the top of .main-content */
       padding: 2vh;
       background-color: rgba(255, 255, 255, 0.8);
-      min-height: 20vh;
+      min-height: 50vh;
     }
-
-    /* Mobile-specific styles remain unchanged */
+    
+    /* Mobile-specific adjustments */
     @media (max-width: 600px) {
-      body {
-        /* Use mobile background settings */
-        background: url("images/Front Facing Skeleton.webp") no-repeat center 0 fixed;
-        background-size: cover;
-      }
-      .top-bar {
-        padding: 2vh 0;
-      }
-      .top-bar ul li {
-        margin: 0 1.5vw;
-      }
       .top-bar ul li a {
         font-size: 1em;
       }
       .anat2me-ellipse {
-        top: 15vh;  /* Mobile value you liked */
         font-size: 1.5em;
+        top: 15vh;
       }
       .extra-content {
         margin-top: 25vh;
@@ -98,15 +94,19 @@
     </ul>
   </div>
 
-  <!-- "Anat2me" text positioned over the skeleton's head -->
-  <div class="anat2me-ellipse">Anat2me</div>
+  <!-- Main content container (positioned relative to the grey top bar) -->
+  <div class="main-content">
+    <!-- "Anat2me" text now positioned relative to .main-content -->
+    <div class="anat2me-ellipse">Anat2me</div>
 
-  <!-- Extra content section to enable scrolling -->
-  <div class="extra-content">
-    <h2>More Content</h2>
-    <p>
-      This section contains extra content to make the page scrollable. Add more sections or details here as needed for your project.
-    </p>
+    <!-- Extra content section -->
+    <div class="extra-content">
+      <h2>More Content</h2>
+      <p>
+        This section contains extra content to make the page scrollable.
+        Add more sections or details here as needed for your project.
+      </p>
+    </div>
   </div>
 </body>
 </html>
